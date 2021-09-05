@@ -138,12 +138,10 @@ def xor(a, b):
     return ans
 
 
-def key_generate(key):
+def round_key_generate(key):
     key = hex_to_bin(key)
     permute(key, key_parity, 56)
-
-
-def round_key_generate(key):
+    
     left = key[0:28]
     right = key[28:56]
 
